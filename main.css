@@ -1,0 +1,429 @@
+/* Open Sans Condensed (webfont) */
+/* substitute Futura and Helvetica with OSC due to license */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
+/* Header Area */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  /* HTML5 display-role reset for older browsers */ }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+div:after, header:after, footer:after {
+  box-sizing: border-box;
+  content: ".";
+  display: block;
+  height: 0;
+  width: 0;
+  line-height: 0;
+  clear: both;
+  visibility: hidden; }
+
+h1 {
+  color: #1c264a;
+  font-family: "Futura", "Open Sans Condensed", Arial, sans-serif;
+  font-size: 24.54px;
+  font-weight: 500;
+  line-height: 36.81px; }
+
+h2 {
+  color: #650360;
+  font-family: "Helvetica Neue", "Open Sans Condensed", Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 24px; }
+
+h3 {
+  color: #505050;
+  font-family: "Helvetica Neue", "Open Sans Condensed", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px; }
+
+h4 {
+  color: #650360;
+  font-family: "Helvetica Neue", "Open Sans Condensed", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px; }
+
+p, li {
+  color: #505050;
+  font-family: "Helvetica Neue", "Open Sans Condensed", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px; }
+
+a, a:link, a:active, a:visited {
+  color: #328fc2;
+  font-family: "Helvetica Neue", "Open Sans Condensed", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px; }
+
+button {
+  background-color: #650360;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", "Open Sans Condensed", Arial, sans-serif;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  padding: 8px 0;
+  width: 100%;
+  /* Header */ }
+
+header .mbl-click {
+  display: none; }
+
+header {
+  background-color: #328fc2; }
+
+header h1 {
+  background: url("img/logo.png") no-repeat scroll left center transparent;
+  float: left;
+  margin-left: 9.13vw;
+  padding-top: 6px;
+  text-indent: 4.34vw; }
+
+.tmpl-nav {
+  float: right;
+  font-size: 0;
+  padding-right: 7.82vw; }
+
+nav a, nav a:link, nav a:active, nav a:visited, nav a:hover {
+  color: #f9f8f9;
+  display: inline-block;
+  padding: 13px 1.56vw 10px;
+  text-decoration: none;
+  text-transform: lowercase; }
+
+nav a:hover, nav a.active {
+  background-color: #006899;
+  /* end Header */
+  /* Content Area */ }
+
+main {
+  float: left;
+  width: 71.73vw; }
+
+main article {
+  margin-left: 9.13vw;
+  padding: 64px 20px 75px 0; }
+
+main article .lead p {
+  margin-top: 34px; }
+
+main article h3 {
+  margin-top: 24px; }
+
+main article .list {
+  margin-top: 14px; }
+
+main article .list li {
+  margin-top: 6px; }
+
+main article .mbl-info {
+  background-color: #bbd8c4;
+  margin-top: 32px;
+  padding: 14px;
+  position: relative;
+  z-index: 1; }
+
+main article .mbl-info img {
+  position: absolute;
+  right: 2.6vw;
+  top: -97px; }
+
+main article .mbl-info h4 {
+  font-weight: bold; }
+
+main article .mbl-info p {
+  font-size: 14px;
+  line-height: 21px;
+  max-width: 46.6vw;
+  /* RATES TABLE */ }
+
+.rates {
+  margin-top: 44px; }
+
+.rates h3 {
+  color: #505050;
+  font-family: "Helvetica Neue", "Open Sans Condensed", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 32px;
+  margin: 0; }
+
+.rates h3 span {
+  font-weight: 500; }
+
+.rates table {
+  width: 100%; }
+
+.rates table tbody tr:nth-child(odd) {
+  background-color: #eef5f0; }
+
+.rates table tbody tr:nth-child(even) {
+  background-color: #ddebe1; }
+
+.rates p, .rates table td {
+  color: #505050;
+  font-family: "Helvetica Neue", "Open Sans Condensed", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 14px 0;
+  text-align: right; }
+
+.rates p {
+  padding: 0; }
+
+.rates table td:first-child {
+  padding-left: 14px;
+  text-align: left; }
+
+.rates table td:last-child {
+  padding-right: 14px; }
+
+.rates p small, .rates table th small {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: right;
+  width: 100%; }
+
+.rates table tr.selected {
+  font-weight: bold;
+  /* end RATES TABLE */
+  /* end Content Area */
+  /* ASIDE Area */ }
+
+aside {
+  float: left;
+  min-height: 200px;
+  padding-top: 65px;
+  width: calc(100% - 71.73vw); }
+
+aside .inner {
+  max-width: 220px; }
+
+.wiget {
+  margin-top: 26px;
+  /* end ASIDE Area */
+  /* LOGIN MODAL */ }
+
+#mdl-login {
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%; }
+  #mdl-login#mdl-login.visible {
+    display: block; }
+
+#mdl-login:before {
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2; }
+
+#mdl-login .dlg {
+  background-color: white;
+  left: 50%;
+  /* 450 - padding */
+  max-width: 390px;
+  padding: 30px;
+  position: fixed;
+  -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.75);
+  /* clear divs */
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 39.13vw;
+  z-index: 3; }
+
+#mdl-login .dlg .btn-close-modal {
+  cursor: pointer;
+  display: inline-block;
+  float: right; }
+
+#mdl-login .dlg .bd {
+  clear: both; }
+
+#mdl-login .dlg .bd h3 {
+  color: #505050;
+  font-family: "Helvetica Neue", "Open Sans Condensed", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 32px;
+  margin: 0 0 40px; }
+
+#mdl-login .dlg .bd form:after {
+  box-sizing: border-box;
+  content: ".";
+  display: block;
+  height: 0;
+  width: 0;
+  line-height: 0;
+  clear: both;
+  visibility: hidden; }
+
+#mdl-login .dlg .bd label {
+  color: #505050;
+  display: block;
+  font-family: "Helvetica Neue", "Open Sans Condensed", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: right; }
+
+#mdl-login .dlg .bd label + label {
+  margin-top: 20px;
+  /* didn't see font-size outlined in the comp for inputs - making the same as label with lighter weight */ }
+
+#mdl-login .dlg .bd input:not([type="submit"]) {
+  border: 1px solid #328fc2;
+  color: #505050;
+  font-family: "Helvetica Neue", "Open Sans Condensed", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-left: 1.56vw;
+  min-width: 75%;
+  padding: 5px 1.33vw; }
+
+#mdl-login .dlg .bd input[type="submit"] {
+  background-color: #650360;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", "Open Sans Condensed", Arial, sans-serif;
+  outline: none;
+  float: right;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-top: 20px;
+  width: 12.17vw;
+  /* Footer */ }
+
+footer {
+  background-color: #e7e8e9;
+  padding: 20px 0 65px 9.13vw; }
+
+footer cite, footer nav a, footer nav a:link, footer nav a:active, footer nav a:visited, footer nav a:hover {
+  background-color: transparent;
+  color: #328fc2;
+  display: inline;
+  font-family: "Helvetica Neue", "Open Sans Condensed", Arial, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.07vw;
+  line-height: 24px; }
+
+footer nav a:hover, footer nav a.active {
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0;
+  /* end Footer */
+  /* TABLET */ }
+
+@media (max-width: 1024px) {
+  /* IPHONE 6 and below */
+    header h1 {
+      text-indent: 6.34vw; } }
+
+@media (max-width: 667px) {
+  /* end CSS */
+    header .mbl-click {
+      cursor: pointer;
+      display: block;
+      float: right;
+      font-size: 28px;
+      line-height: 28px;
+      padding: 6px;
+      position: relative;
+      z-index: 3; }
+    header h1 {
+      text-indent: 13.34vw; }
+    header nav {
+      display: none; }
+      header nav.visible {
+        background-color: #328fc2;
+        display: block;
+        min-width: 180px;
+        max-width: 180px;
+        position: absolute;
+        right: 0;
+        top: 42px;
+        width: 100%; }
+    header .tmpl-nav {
+      float: none;
+      position: relative; }
+    header nav a, header nav a:link, header nav a:active, header nav a:visited, header nav a:hover {
+      display: block; }
+    main {
+      float: none;
+      width: 100%; }
+    main article {
+      margin-left: 0;
+      margin: 14px;
+      padding: 0; }
+    aside {
+      float: none;
+      padding: 14px;
+      width: 100%; }
+    aside .inner {
+      margin: 14px;
+      /* MODAL */ }
+    #mdl-login .dlg {
+      padding: 20px;
+      width: 75%; }
+    #mdl-login .dlg .bd h3 {
+      font-size: 22px;
+      line-height: 22px;
+      margin: 0 0 20px; }
+    #mdl-login .dlg .bd label {
+      text-align: left; }
+    #mdl-login .dlg .bd input:not([type="submit"]) {
+      display: block;
+      margin-left: 0;
+      width: 100%; }
+    #mdl-login .dlg .bd input[type="submit"] {
+      line-height: 32px;
+      width: 30%; } }
