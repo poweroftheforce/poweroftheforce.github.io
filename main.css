@@ -1,11 +1,14 @@
 /* Open Sans Condensed (webfont) */
 /* substitute Futura and Helvetica with OSC due to license */
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
 /* Header Area */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -33,17 +36,14 @@ blockquote:before, blockquote:after, q:before, q:after {
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+  /* end CSS Reset */
+  /* clear divs */ }
 
-div:after, header:after, footer:after {
-  box-sizing: border-box;
-  content: ".";
-  display: block;
-  height: 0;
-  width: 0;
-  line-height: 0;
-  clear: both;
-  visibility: hidden; }
+div:after, header:after, footer:after, main:after, aside:after, #mdl-login .dlg .bd form:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 h1 {
   color: #1c264a;
@@ -233,10 +233,93 @@ aside {
 aside .inner {
   max-width: 220px; }
 
-.wiget {
-  margin-top: 26px;
+.widget {
+  margin-top: 26px; }
+
+.widget ul {
+  border-bottom: 1px solid #ccc;
+  font-size: 0; }
+
+.widget ul li {
+  background-color: #ddebe1;
+  bottom: -8px;
+  border-right: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  color: #328fc2;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", "Open Sans Condensed", Arial, sans-serif;
+  font-size: 18px;
+  left: 0;
+  line-height: 24px;
+  padding: 10px 14px;
+  position: relative; }
+  .widget ul li.selected {
+    background-color: #f5f5f5;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-top: 1px solid #fff;
+    left: -1px;
+    padding: 18px 14px;
+    top: 2px;
+    z-index: 5; }
+  .widget ul li.selected:before {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    content: "";
+    display: block;
+    height: 100%;
+    left: -2px;
+    position: absolute;
+    top: -2px;
+    width: 102%;
+    z-index: 4; }
+  .widget ul li.selected:first-child:before {
+    border-left: 0;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 1px;
+    position: absolute;
+    top: -2px;
+    width: 100%;
+    z-index: 4; }
+
+.widget ul li:first-child {
+  border-right: 0; }
+  .widget ul li:first-child.selected {
+    border-right: 1px solid #fff;
+    border-top: 0; }
+
+.widget > div {
+  background-color: #f5f5f5;
+  border-top: 1px solid #fff;
+  display: none;
+  padding: 0 14px 30px;
+  position: relative;
+  z-index: 3; }
+
+.widget h4 {
+  color: #328fc2; }
+
+.widget .news {
+  display: block; }
+  .widget .news h4 {
+    margin-top: 30px; }
+  .widget .news p {
+    font-size: 14px;
+    line-height: 21px; }
+
+.widget .archive {
   /* end ASIDE Area */
   /* LOGIN MODAL */ }
+  .widget .archive h4 {
+    margin-top: 30px; }
+  .widget .archive h4 + h4 {
+    margin-top: 18px; }
 
 #mdl-login {
   bottom: 0;
@@ -271,7 +354,10 @@ aside .inner {
   -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.75);
-  /* clear divs */
+  /* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
   top: 50%;
   transform: translate(-50%, -50%);
   width: 39.13vw;
@@ -292,16 +378,6 @@ aside .inner {
   font-weight: 300;
   line-height: 32px;
   margin: 0 0 40px; }
-
-#mdl-login .dlg .bd form:after {
-  box-sizing: border-box;
-  content: ".";
-  display: block;
-  height: 0;
-  width: 0;
-  line-height: 0;
-  clear: both;
-  visibility: hidden; }
 
 #mdl-login .dlg .bd label {
   color: #505050;
@@ -394,6 +470,7 @@ footer nav a:hover, footer nav a.active {
         width: 100%; }
     header .tmpl-nav {
       float: none;
+      font-size: initial;
       position: relative; }
     header nav a, header nav a:link, header nav a:active, header nav a:visited, header nav a:hover {
       display: block; }
@@ -410,6 +487,7 @@ footer nav a:hover, footer nav a.active {
       width: 100%; }
     aside .inner {
       margin: 14px;
+      max-width: none;
       /* MODAL */ }
     #mdl-login .dlg {
       padding: 20px;
@@ -426,4 +504,11 @@ footer nav a:hover, footer nav a.active {
       width: 100%; }
     #mdl-login .dlg .bd input[type="submit"] {
       line-height: 32px;
-      width: 30%; } }
+      width: 30%;
+      /* Footer */ }
+    footer {
+      padding: 20px; }
+    footer .tmpl-nav {
+      float: none;
+      font-size: initial;
+      width: 100%; } }

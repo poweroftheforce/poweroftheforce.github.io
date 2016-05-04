@@ -95,6 +95,18 @@ $(function() {
         $( 'header nav' ).toggleClass( 'visible' );
     });
 
+    $( '.widget ul li' ).click(function() {
+        var $this   = $( this ),
+            chosen  = $this.text().toLowerCase(),
+            $widget = $( '.widget' );
+
+        $( '.widget ul li' ).removeClass( 'selected' );
+        $this.addClass( 'selected' );
+        $widget
+            .find( '> div' ).hide()
+            .end().find( '> div.' + chosen ).show();
+    });
+
 });
 
 })( window, undefined );

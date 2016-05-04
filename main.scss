@@ -7,6 +7,37 @@
 
 
 
+$futura: "Futura", "Open Sans Condensed", Arial, sans-serif;
+$helvetica: "Helvetica Neue", "Open Sans Condensed", Arial, sans-serif;
+
+$defaultText: #505050;
+$primaryColor: #1C264A;
+$secondaryColor: #650360;
+$linkColor: #328FC2;
+
+
+@mixin button() {
+	background-color: $secondaryColor;
+	border: 0;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $helvetica;
+	outline: none;
+}
+@mixin clear() {
+	&:after {
+		content: "";
+        display: table;
+        clear: both;
+	}
+}
+@mixin shadow() {
+	-webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
+}
+
 
 
 
@@ -15,6 +46,14 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -60,33 +99,11 @@ table {
 	border-spacing: 0;
 }
 
-$futura: "Futura", "Open Sans Condensed", Arial, sans-serif;
-$helvetica: "Helvetica Neue", "Open Sans Condensed", Arial, sans-serif;
+/* end CSS Reset */
 
-$defaultText: #505050;
-$primaryColor: #1C264A;
-$secondaryColor: #650360;
-$linkColor: #328FC2;
-
-
-@mixin button() {
-	background-color: $secondaryColor;
-	border: 0;
-	color: white;
-	cursor: pointer;
-	display: inline-block;
-	font-family: $helvetica;
-	outline: none;
-}
-@mixin clear() {box-sizing:border-box;content:".";display:block;height:0;width:0;line-height:0;clear:both;visibility:hidden;}
-@mixin shadow() {
-	-webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.75);
-}
 
 /* clear divs */
-div:after, header:after, footer:after {
+div, header, footer, main, aside, #mdl-login .dlg .bd form {
 	@include clear();
 }
 
@@ -317,8 +334,107 @@ aside .inner {
 	max-width: 220px;
 }
 
-.wiget {
+.widget {
 	margin-top: 26px;
+}
+
+.widget ul {
+	border-bottom: 1px solid #CCC;
+	font-size: 0;
+}
+
+.widget ul li {
+	background-color: #DDEBE1;
+	bottom: -8px;
+	border-right: 1px solid #CCC;
+	border-top: 1px solid #CCC;
+	color: $linkColor;
+	cursor: pointer;
+	display: inline-block;
+	font-family: $helvetica;
+	font-size: 18px;
+	left: 0;
+	line-height: 24px;
+	padding: 10px 14px;
+	position: relative;
+	&.selected {
+		background-color: #F5F5F5;
+		border-left: 1px solid #FFF;
+		border-right: 1px solid #FFF;
+		border-top: 1px solid #FFF;
+		left: -1px;
+		padding: 18px 14px;
+		top: 2px;
+		z-index: 5;
+	}
+	&.selected:before {
+		border-left: 1px solid #CCC;
+		border-right: 1px solid #CCC;
+		border-top: 1px solid #CCC;
+		content: "";
+		display: block;
+		height: 100%;
+		left: -2px;
+		position: absolute;
+		top: -2px;
+		width: 102%;
+		z-index: 4;
+	}
+	&.selected:first-child:before {
+		border-left: 0;
+		border-right: 1px solid #CCC;
+		border-top: 1px solid #CCC;
+		content: "";
+		display: block;
+		height: 100%;
+		left: 1px;
+		position: absolute;
+		top: -2px;
+		width: 100%;
+		z-index: 4;
+	}
+}
+
+.widget ul li:first-child {
+	border-right: 0;
+	&.selected {
+		border-right: 1px solid #FFF;
+		border-top: 0;
+	}
+}
+
+.widget > div {
+	background-color: #F5F5F5;
+	border-top: 1px solid #FFF;
+	display: none;
+	padding: 0 14px 30px;
+	position: relative;
+	z-index: 3;
+}
+
+.widget h4 {
+	color: $linkColor;
+}
+
+.widget .news {
+	/* show this guy initially */
+	display: block;
+	& h4 {
+		margin-top: 30px;
+	}
+	& p {
+		font-size: 14px;
+		line-height: 21px;
+	}
+}
+
+.widget .archive {
+	& h4 {
+		margin-top: 30px;
+	}
+	& h4 + h4 {
+		margin-top: 18px;
+	}
 }
 
 /* end ASIDE Area */
@@ -384,10 +500,6 @@ aside .inner {
 	font-weight: 300;
 	line-height: 32px;
 	margin: 0 0 40px
-}
-
-#mdl-login .dlg .bd form:after {
-	@include clear();
 }
 
 #mdl-login .dlg .bd label {
@@ -535,6 +647,7 @@ footer nav a:hover, footer nav a.active {
 
 	aside .inner {
 		margin: 14px;
+		max-width: none;
 	}
 
 
