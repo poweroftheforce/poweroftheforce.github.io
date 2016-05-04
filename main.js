@@ -37,7 +37,7 @@ var lib = {
             .html( $nav )
             .find( 'a' ).each(function() {
                 var $this = $( this );
-console.log($this.text());
+
                 if ( $this.text().toLowerCase() == name ) {
                     $this.addClass( 'active' );
                 }
