@@ -123,21 +123,6 @@ h2 {
 	line-height: 24px;
 }
 
-h3 {
-	color: $defaultText;
-	font-family: $helvetica;
-	font-size: 16px;
-	font-weight: 600;
-	line-height: 18px;
-}
-
-h4 {
-	color: $secondaryColor;
-	font-family: $helvetica;
-	font-size: 16px;
-	line-height: 24px;
-}
-
 p, li {
 	color: $defaultText;
 	font-family: $helvetica;
@@ -172,151 +157,12 @@ header {
 	background-color: $linkColor;
 }
 
-header h1 {
-	background: url( "img/logo.png" ) no-repeat scroll left center transparent;
-	float: left;
-	margin-left: 9.13vw;
-	padding-top: 6px;
-	text-indent: 4.34vw;
-}
-
-.tmpl-nav {
-	float: right;
-	font-size: 0;
-	padding-right: 7.82vw;
-}
-
-nav a, nav a:link, nav a:active, nav a:visited, nav a:hover {
-	color: #F9F8F9;
-	display: inline-block;
-	padding: 13px 1.56vw 10px;
-	text-decoration: none;
-	text-transform: lowercase;
-}
-
-nav a:hover, nav a.active {
-	background-color: #006899;
-}
-
 /* end Header */
 
 
 
 /* Content Area */
 
-main {
-	float: left;
-	width: 71.73vw;
-}
-
-main article {
-	margin-left: 9.13vw;
-	padding: 64px 20px 75px 0;
-}
-
-main article .lead p {
-	margin-top: 34px;
-}
-
-main article h3 {
-	margin-top: 24px;
-}
-
-main article .list {
-	margin-top: 14px;
-}
-
-main article .list li {
-	margin-top: 6px;
-}
-
-main article .mbl-info {
-	background-color: #BBD8C4;
-	margin-top: 32px;
-	padding: 14px;
-	position: relative;
-	z-index: 1;
-}
-
-main article .mbl-info img {
-	position: absolute;
-	right: 2.6vw;
-	top: -97px;
-}
-
-main article .mbl-info h4 {
-	font-weight: bold;
-}
-
-main article .mbl-info p {
-	font-size: 14px;
-	line-height: 21px;
-	max-width: 46.6vw;
-}
-
-/* RATES TABLE */
-
-.rates {
-	margin-top: 44px;
-}
-
-.rates h3 {
-	color: $defaultText;
-	font-family: $helvetica;
-	font-size: 28px;
-	font-weight: 300;
-	line-height: 32px;
-	margin: 0;
-}
-
-.rates h3 span {
-	font-weight: 500;
-}
-
-.rates table {
-	width: 100%;
-}
-
-.rates table tbody tr:nth-child(odd) {
-	background-color: #EEF5F0;
-}
-
-.rates table tbody tr:nth-child(even) {
-	background-color: #DDEBE1;
-}
-
-.rates p, .rates table td {
-	color: $defaultText;
-	font-family: $helvetica;
-	font-size: 18px;
-	line-height: 24px;
-	padding: 14px 0;
-	text-align: right;
-}
-
-.rates p { padding: 0; }
-.rates table td:first-child {
-	padding-left: 14px;
-	text-align: left;
-}
-
-.rates table td:last-child {
-	padding-right: 14px;
-}
-
-.rates p small, .rates table th small {
-	display: inline-block;
-	font-size: 12px;
-	line-height: 24px;
-	text-align: right;
-	width: 100%;
-}
-
-.rates table tr.selected {
-	font-weight: bold;
-}
-
-/* end RATES TABLE */
 
 /* end Content Area */
 
