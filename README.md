@@ -1,2 +1,1 @@
-# PowerOfTheForce / Christopher D Engle - Github.io
-<a href="http://poweroftheforce.github.io/" target="_blank">profile page</a>
+# [PowerOfTheForce / Christopher D Engle - Github.io](http://poweroftheforce.github.io/)
